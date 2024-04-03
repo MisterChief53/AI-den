@@ -26,6 +26,15 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+.background-image {
+  background-image: url("../public/small_title.png");
+  background-size: cover; /* Ensures image covers the entire container */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  width: 300px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  position: relative; /* Allows positioning text on top */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

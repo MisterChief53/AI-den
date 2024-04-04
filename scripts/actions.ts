@@ -6,7 +6,7 @@ export const UploadToGcs = async (file: File) => {
   if (file.size < 1) throw new Error('File is empty');
 
   const buffer = await file.arrayBuffer();
-  const storage = new Storage({ keyFilename: 'keys.json'});
+  const storage = new Storage(/*{ keyFilename: 'keys.json'}*/);
   const cache_control = "no-cache, no-store, max-age=0"
 
   await storage.bucket('test-aiden-user-upload').file('test.jpg').save(Buffer.from(buffer));

@@ -30,7 +30,7 @@ export default async function AiTipsComponent(){
 
 
             <div className="relative items-center justify-center">
-                <div className="h-40 w-40 min-h-20 max-h-40 min-w-60 max-w-60 bg-cover bg-no-repeat rounded-2xl overflow-y-auto items-center justify-center bg-green-500 p-5">
+                <div className="h-50 w-40 min-h-20 max-h-50 min-w-60 max-w-60 bg-cover bg-no-repeat rounded-2xl overflow-y-auto items-center justify-center bg-green-800 p-5">
                     <div className="flex items-center justify-center text-white">
                      <p>{aiTips}</p>
                     </div>

@@ -21,7 +21,6 @@ interface NavItem{
 
 const links: NavItem[] = [
   {text: "Dashboard", url: "/"},
-  {text: "Leaderboard", url: "/leaderboard"}
 ];
 
 export default function Home() {

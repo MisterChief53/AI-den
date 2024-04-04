@@ -5,6 +5,7 @@ import SmallTitleComponent from "@/components/smallTitleComponent";
 import Image from "next/image";
 import GardenStateComponent from "@/components/gardenStateComponent";
 import AiTipsComponent from "@/components/aiTipsComponent";
+import StatsComponent from "@/components/statsComponent";
 
 
 interface NavbarProps{
@@ -30,11 +31,9 @@ export default function Home() {
       <GardenStateComponent/>
       <div className="relative items-center justify-center">
           <div className="flex items-center justify-center h-full text-white">
-              <ul className="flex space-x-4">
+              <ul className="md:flex md:space-x-4 md:space-y-0 space-y-4">
                   <li><AiTipsComponent/></li>
-                  <li>
-                    55
-                  </li>
+                  <li><StatsComponent/></li>
               </ul>
           </div>
       </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function GardenStateComponent(){
     return (
-        <div className="flex flex-col items-center justify-between">
+        <div className="flex flex-col items-center justify-between pb-4">
             <div className="pb-5">
                 <Image
                     src="/level1.svg"

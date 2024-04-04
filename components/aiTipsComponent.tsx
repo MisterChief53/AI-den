@@ -3,7 +3,7 @@ import SmallTitleComponent from "@/components/smallTitleComponent";
 async function getTips() {
     try {
         const params = new URLSearchParams({
-            prompt: 'Describe the image',
+            prompt: 'Please give 1 recommendation for my garden.',
             uri: 'test-img-aiden/rodrigo'
         });
 

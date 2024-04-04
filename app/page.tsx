@@ -4,6 +4,7 @@ import AiTipsComponent from "@/components/aiTipsComponent";
 import StatsComponent from "@/components/statsComponent";
 import MediaComponent from "@/components/mediaComponent";
 import FileUpload from "@/components/uploadAction";
+import AiTipsVideo from "@/components/aiTipsVideo";
 
 interface NavbarProps{
   logo: string,
@@ -35,6 +36,7 @@ export default function Home() {
         </div>
       </div>
       <AiTipsComponent />
+      <AiTipsVideo />
       <div className="flex justify-center text-2xl m-4">
         <FileUpload />
       </div>

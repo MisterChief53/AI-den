@@ -3,13 +3,13 @@ import SmallTitleComponent from "@/components/smallTitleComponent";
 async function getTips() {
     try {
         const params = new URLSearchParams({
-            prompt: 'Please give 1 recommendation for my garden.',
-            uri: 'test-img-aiden/rodrigo'
+            prompt: 'Describe the image',
+            uri: 'test-aiden-user-upload/test.jpg'
         });
 
         const url = `https://us-central1-aiden-419204.cloudfunctions.net/prompt-with-uri-img?${params.toString()}`;
 
-        const res = await fetch(url);
+        const res = await fetch(url, { cache: 'no-store' });
         const aiTips = await res.text();
 
         return { aiTips };

@@ -7,7 +7,7 @@ import GardenStateComponent from "@/components/gardenStateComponent";
 import AiTipsComponent from "@/components/aiTipsComponent";
 import StatsComponent from "@/components/statsComponent";
 import RowStatComponent from "@/components/rowStatComponent";
-
+import FileUpload from "@/components/uploadAction";
 
 interface NavbarProps{
   logo: string,
@@ -37,6 +37,7 @@ export default function Home() {
               </ul>
           </div>
       </div>
+      <FileUpload/>
     </main>
   );
 }

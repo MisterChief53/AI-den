@@ -4,7 +4,7 @@ import RowStatComponent from '@/components/rowStatComponent';
 async function getSensorData() {
     try {
         const url = `https://us-central1-aiden-419204.cloudfunctions.net/getAverage`;
-        const res = await fetch(url);
+        const res = await fetch(url, { cache: 'no-store' });
         const sensorData = await res.json();
 
         return { sensorData };

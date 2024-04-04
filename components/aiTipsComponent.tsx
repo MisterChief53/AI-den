@@ -1,6 +1,27 @@
 import SmallTitleComponent from "@/components/smallTitleComponent";
 
-export default function AiTipsComponent(){
+async function getTips() {
+    try {
+        const params = new URLSearchParams({
+            prompt: 'Describe the image',
+            uri: 'test-img-aiden/rodrigo'
+        });
+
+        const url = `https://us-central1-aiden-419204.cloudfunctions.net/prompt-with-uri-img?${params.toString()}`;
+
+        const res = await fetch(url);
+        const aiTips = await res.text();
+
+        return { aiTips };
+    } catch (error) {
+        console.error(error);
+        return { aiTips: 'Failed to get AI tips' };
+    }
+}
+
+export default async function AiTipsComponent(){
+    const { aiTips } = await getTips()
+    
     return (
         <div className="flex flex-col items-center justify-between">
             <div className="pb-5">
@@ -11,10 +32,7 @@ export default function AiTipsComponent(){
             <div className="relative items-center justify-center">
                 <div className="h-40 w-40 min-h-20 max-h-40 min-w-60 max-w-60 bg-cover bg-no-repeat rounded-2xl overflow-y-auto items-center justify-center bg-green-500 p-5">
                     <div className="flex items-center justify-center text-white">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <p>{aiTips}</p>
                     </div>
                 </div>
             </div>

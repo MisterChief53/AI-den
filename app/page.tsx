@@ -6,6 +6,7 @@ import Image from "next/image";
 import GardenStateComponent from "@/components/gardenStateComponent";
 import AiTipsComponent from "@/components/aiTipsComponent";
 import StatsComponent from "@/components/statsComponent";
+import RowStatComponent from "@/components/rowStatComponent";
 
 
 interface NavbarProps{

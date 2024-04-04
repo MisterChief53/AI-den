@@ -8,7 +8,7 @@ function FileUpload() {
         <input type='file' name='file' />
         <button
           type='submit'
-          className='border border-slate-200 shadow-md hover:bg-slate-100 px-4 py-2 rounded-md'
+          className='border border-white text-white shadow-md hover:bg-green-700 px-4 py-2 rounded-md'
         >
           Upload
         </button>

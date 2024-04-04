@@ -9,7 +9,8 @@ export const UploadToGcs = async (file: File) => {
   const storage = new Storage(/*{ keyFilename: 'keys.json'}*/);
   const cache_control = "no-cache, no-store, max-age=0"
 
-  await storage.bucket('test-aiden-user-upload').file('test.jpg').save(Buffer.from(buffer));
+  const blob = storage.bucket('test-aiden-user-upload').file('image.jpg');
+  await blob.save(Buffer.from(buffer), { metadata: { cacheControl: cache_control } });
 
   console.log('File uploaded');
 

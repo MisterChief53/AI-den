@@ -61,32 +61,24 @@ export default async function GardenStateComponent(){
     const [rating, level] = getMagnitude(sensorData);
 
     return (
-        <div className="flex flex-col items-center justify-between pb-4">
-            <div className="pb-5">
-                <Image
-                    src={`/level${level}.svg`}
-                    width={400}
-                    height={400}
-                    alt={`Level ${level} garden`}
-                />
+        <div className="flex flex-col items-center space-y-6">
+            <div className="flex items-center justify-center bg-green-600 p-4 rounded-2xl">
+                <span className="text-white font-bold text-5xl">Your Garden</span>
             </div>
-
-            <div className="relative items-center justify-center">
-                <div className="h-20 w-40 min-h-20 min-w-30 max-w-60 bg-cover bg-no-repeat rounded-2xl overflow-hidden items-center justify-center bg-green-800">
-                    <div className="flex items-center justify-center h-full text-white">
-                        <ul className="flex space-x-4">
-                            <li>{rating}</li>
-                            <li>
-                                <Image
-                                    src='/heart.svg'
-                                    width={25}
-                                    height={25}
-                                    alt="Green heart"
-                                />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <Image
+                src={`/level${level}.svg`}
+                width={400}
+                height={400}
+                alt={`Level ${level} garden`}
+            />
+            <div className="flex items-center space-x-2">
+                <span className="text-white font-bold text-3xl">{rating}</span>
+                <Image
+                    src='/heart.svg'
+                    width={30}
+                    height={30}
+                    alt="Green heart"
+                />
             </div>
         </div>
     );

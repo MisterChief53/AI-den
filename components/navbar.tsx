@@ -13,8 +13,8 @@ interface NavItem{
 
 export default function NavBar(props: NavbarProps){
     return (
-        <div className="">
-            <nav className="fixed top-0 left-0 w-full h-16 bg-white text-black px-4">
+        <>
+            <nav className="top-0 left-0 w-full h-16 bg-white text-black px-4">
                 {/* <div className="flex items-center">
                     <Image
                         src={props.logo}
@@ -38,6 +38,6 @@ export default function NavBar(props: NavbarProps){
                     ))}
                 </ul>
             </nav>
-        </div>
+        </>
     );
 }
